@@ -80,16 +80,16 @@
     }
 
     .menu {
-      float: right;
-
+      text-align: right;
       &.ant-menu-horizontal {
         border-bottom: none;
-      }
 
-      &.ant-menu-horizontal > .ant-menu-submenu, &.ant-menu-horizontal > .ant-menu-item {
-        height: $menu_height;
-        line-height: $menu_height;
-        min-width: 72px;
+        ::v-deep & > .ant-menu-submenu-horizontal,
+        ::v-deep  & > .ant-menu-item {
+          height: $menu_height;
+          line-height: $menu_height;
+          min-width: 72px;
+        }
       }
     }
   }
