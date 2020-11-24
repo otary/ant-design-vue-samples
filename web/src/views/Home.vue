@@ -1,58 +1,51 @@
 <template>
-  <div class="home">
-    <header class="header">
+  <a-layout>
+    <a-layout-header class="header">
       <a-row>
-        <a-col :xs="20" :sm="20" :md="6" :lg="5" :xl="5" :xxl="4">
-          <a class="logo" href="/">
-            <img src="../assets/logo.png" alt="logo">
+        <a-col :xs="20" :sm="20" :md="8" :lg="7" :xl="5" :xxl="{ span: 4, offset: 4}">
+          <a class="header-logo" href="#">
+            <logo class="logo"/>
+            <h2 class="header-title">全民视频解析</h2>
           </a>
         </a-col>
-        <a-col :xs="4" :sm="4" :md="18" :lg="19" :xl="19" :xxl="20">
-          <a-menu class="menu" mode="horizontal">
-            <a-menu-item key="app">组件</a-menu-item>
-            <a-sub-menu key="app1">
-              <span slot="title">生态组件</span>
-              <a-menu-item key="app1-1">设计资源</a-menu-item>
-              <a-menu-item key="app1-2">VsCodeExtension</a-menu-item>
-            </a-sub-menu>
-            <a-menu-item key="app2">支持我们</a-menu-item>
-            <a-menu-item key="app3">Vue实战教程</a-menu-item>
-            <a-menu-item key="app4">工作</a-menu-item>
+        <a-col :xs="4" :sm="4" :md="16" :lg="17" :xl="19" :xxl="{ span:12, offset: -4 }">
+          <a-menu class="menu" mode="horizontal" :default-selected-keys="['1']">
+            <!--<a-menu-item key="1">
+                <router-link to="/gif">
+                    <a-icon type="highlight"/>
+                    Gif制作
+                </router-link>
+            </a-menu-item>-->
+            <a-menu-item key="2">
+              <a href="https://www.bqrdh.com" target="_blank">
+                <a-icon type="home"/>
+                主站</a>
+            </a-menu-item>
           </a-menu>
         </a-col>
       </a-row>
-    </header>
-    <div class="main-wrapper">
+    </a-layout-header>
+    <a-layout-content class="main">
       <a-row>
-        <a-col :xs="24" :sm="24" :md="18" :lg="19" :xl="19" :xxl="20">
-          <section class="main-container main-container-component">
-            <div class="toc-affix toc-affix-cn" style="width: 150px">
-              <a-anchor>
-                <a-anchor-link href="#components-anchor-demo-basic" title="Basic demo"/>
-                <a-anchor-link href="#components-anchor-demo-static" title="Static demo"/>
-                <a-anchor-link
-                  href="#components-anchor-demo-basic"
-                  title="Basic demo with Target"
-                  target="_blank"
-                />
-                <a-anchor-link href="#API" title="API">
-                  <a-anchor-link href="#Anchor-Props" title="Anchor Props"/>
-                  <a-anchor-link href="#Link-Props" title="Link Props"/>
-                </a-anchor-link>
-              </a-anchor>
-            </div>
-          </section>
+        <a-col :xxl="{ span: 16, offset: 4}">
+          <router-view></router-view>
         </a-col>
       </a-row>
-    </div>
-  </div>
+    </a-layout-content>
+    <a-layout-footer style="text-align: center">
+      © 2020 <a href="https://www.bqrdh.com" target="_blank">不求人导航</a> <a href="https://beian.miit.gov.cn/"
+                                                                          target="_blank">闽ICP备19026837号</a>
+    </a-layout-footer>
+  </a-layout>
 </template>
 
 <script>
 
   export default {
     name: 'Home',
-    components: {}
+    components: {
+      'Logo': () => import('@/components/Logo')
+    }
   }
 </script>
 
@@ -61,46 +54,70 @@
   $menu_height: 64px;
 
   .header {
-    position: relative;
-    max-width: 100%;
-    background: #fff;
-    box-shadow: 0 2px 8px #f0f1f2;
-    z-index: 10;
-  }
+    background-color: #fff;
 
+    &-logo {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      text-decoration: none;
+      white-space: nowrap;
 
-  .logo {
-    float: left;
-    padding-left: 40px;
-    height: $menu_height;
-    line-height: $menu_height;
-    overflow: hidden;
-    text-decoration: none;
-    white-space: nowrap;
-    img {
-      height: 32px;
-      margin-right: 16px;
+      .logo {
+        height: 45px;
+        margin-right: 16px;
+      }
+    }
+
+    &-title {
+      display: inline-block;
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: #409afd;
+      text-shadow: 3px 4px 0 rgba(0, 0, 0, .1);
+    }
+
+    .menu {
+      float: right;
+
+      &.ant-menu-horizontal {
+        border-bottom: none;
+      }
+
+      &.ant-menu-horizontal > .ant-menu-submenu, &.ant-menu-horizontal > .ant-menu-item {
+        height: $menu_height;
+        line-height: $menu_height;
+        min-width: 72px;
+      }
     }
   }
 
-  .menu {
-    &.ant-menu-horizontal {
-      border-bottom: none;
+
+  @media all and (max-width: 768px) {
+
+    .ant-layout-header {
+      padding: 0 25px;
     }
 
-    &.ant-menu-horizontal > .ant-menu-submenu, &.ant-menu-horizontal > .ant-menu-item {
-      height: $menu_height;
-      line-height: $menu_height;
-      min-width: 72px;
-      border-top: 2px solid transparent;
+    .header {
+      &-logo {
+        img {
+          height: 32px;
+        }
+      }
+
+      &-title {
+        font-size: 1.6rem;
+      }
     }
+
   }
 
-
-  .toc-affix {
-    width: 150px;
-    position: fixed;
-    top: 100px;
-    right: 10px;
+  .main {
+    min-height: calc(100vh - 135px);
+    padding: 10px;
+    text-align: left;
   }
 </style>
