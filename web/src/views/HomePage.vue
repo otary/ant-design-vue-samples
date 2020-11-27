@@ -9,11 +9,11 @@
           </a>
         </a-col>
         <a-col :xs="4" :sm="4" :md="16" :lg="17" :xl="19" :xxl="{ span:12, offset: -4 }">
-          <a-menu class="menu" mode="horizontal" :default-selected-keys="['1']">
-            <!--<a-menu-item key="1">
-                <router-link to="/gif">
-                    <a-icon type="highlight"/>
-                    Gif制作
+          <a-menu class="menu" mode="horizontal" :selectedKeys="[$route.path]">
+            <!--<a-menu-item key="/bilibili">
+                <router-link :to="{ name: 'bilibili' }">
+                  <i class="site-icon bilibili-icon"></i>
+                  B站
                 </router-link>
             </a-menu-item>-->
             <a-menu-item key="2">
