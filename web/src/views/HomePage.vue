@@ -81,6 +81,7 @@
 
     .menu {
       text-align: right;
+
       &.ant-menu-horizontal {
         border-bottom: none;
 
@@ -91,6 +92,10 @@
           min-width: 72px;
         }
       }
+    }
+
+    &-icon {
+      margin-right: 3px;
     }
   }
 
