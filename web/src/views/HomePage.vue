@@ -13,6 +13,7 @@
             <!--<a-menu-item key="/bilibili">
                 <router-link :to="{ name: 'bilibili' }">
                   <i class="site-icon bilibili-icon"></i>
+                  <a-icon type="border-outer" class="menu-icon"/>
                   B站
                 </router-link>
             </a-menu-item>-->
@@ -92,10 +93,10 @@
           min-width: 72px;
         }
       }
-    }
 
-    &-icon {
-      margin-right: 3px;
+      &-icon {
+        margin-right: 3px;
+      }
     }
   }
 
