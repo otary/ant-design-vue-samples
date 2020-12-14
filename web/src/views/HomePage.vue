@@ -10,13 +10,23 @@
         </a-col>
         <a-col :xs="4" :sm="4" :md="16" :lg="17" :xl="19" :xxl="{ span:12, offset: -4 }">
           <a-menu class="menu" mode="horizontal" :selectedKeys="[$route.path]">
-            <!--<a-menu-item key="/bilibili">
-                <router-link :to="{ name: 'bilibili' }">
-                  <i class="site-icon bilibili-icon"></i>
-                  <a-icon type="border-outer" class="menu-icon"/>
-                  B站
+           <!-- <a-sub-menu>
+               <span slot="title">
+                <a-icon type="form"/>CSS生成器
+              </span>
+              <a-menu-item key="/box-style-editor">
+                <router-link :to="{ name: 'box-style-editor' }">
+                  <a-icon type="tablet" class="menu-icon"/>
+                  CSS边框生成器
                 </router-link>
-            </a-menu-item>-->
+              </a-menu-item>
+              <a-menu-item key="/text-style-editor">
+                <router-link :to="{ name: 'text-style-editor' }">
+                  <a-icon type="font-size" class="menu-icon"/>
+                  CSS文字生成器
+                </router-link>
+              </a-menu-item>
+            </a-sub-menu>-->
             <a-menu-item key="2">
               <a href="https://www.bqrdh.com" target="_blank">
                 <a-icon type="home"/>
