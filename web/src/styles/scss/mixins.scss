@@ -1,0 +1,8 @@
+@import "variables";
+
+/**
+ * 将px转换成rem(默认font-size:100px)
+ */
+@function px2rem($px) {
+  @return ($px / $base-font-size) + rem;
+}
