@@ -17,8 +17,8 @@
   export default {
     name: 'HomePage',
     components: {
-      'Header': () => import('@/components/Header'),
-      'Footer': () => import('@/components/Footer')
+      'Header': () => import('@/components/Header/index'),
+      'Footer': () => import('@/components/Footer/index')
     }
   }
 </script>

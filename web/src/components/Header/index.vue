@@ -47,7 +47,7 @@
 </script>
 
 <style scoped lang="scss">
-  @import "../styles/scss/mixins";
+  @import "../../styles/scss/mixins";
 
   .header {
     background-color: $menu-bg-color;

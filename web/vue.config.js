@@ -42,7 +42,8 @@ module.exports = {
     resolve: {
       alias: {
         '@': path.join(__dirname, 'src'),
-        '@public': path.join(__dirname, 'public')
+        '@public': path.join(__dirname, 'public'),
+        '@styles': path.join(__dirname, 'src', 'styles')
       }
     }
   }
