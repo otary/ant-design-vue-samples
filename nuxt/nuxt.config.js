@@ -24,7 +24,7 @@ module.exports = {
     /*
      ** Global CSS 公共样式
      */
-    css: ['~/assets/scss/common.scss', 'ant-design-vue/dist/antd.less'],
+    css: ['~/styles/scss/index.scss', 'ant-design-vue/dist/antd.less'],
     vue: {
         config: {
             productionTip: true,

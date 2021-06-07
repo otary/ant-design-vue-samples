@@ -2,12 +2,11 @@ import Locale from '~/locales'
 
 /**
  * 全局变量
- * @returns {{locales, locale: *, token: string}}
+ * @returns {{locales, locale: *}}
  */
 export const state = () => ({
     locales: Locale(),
-    locale: Locale()[0],
-    token: ''
+    locale: Locale()[0]
 })
 
 export const mutations = {
@@ -19,13 +18,6 @@ export const mutations = {
         if (state.locales.indexOf(locale) !== -1) {
             state.locale = locale
         }
-    },
-    /**
-     * @param token 登录用户ID
-     * @constructor
-     */
-    SET_TOKEN (state, token) {
-        state.token = token
     }
 }
 
@@ -36,12 +28,6 @@ export const actions = {
      */
     updateLang ({commit}, val) {
         commit('SET_LANG', val)
-    },
-    /**
-     * @param commit 用户ID修改
-     * @param token 用户ID
-     */
-    updateToken ({commit}, token) {
-        commit('SET_TOKEN', token)
     }
 }
+
