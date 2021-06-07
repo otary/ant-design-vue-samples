@@ -1,4 +1,4 @@
-import api from '@/api'
+import userApi from '@/api/user'
 import {getTokenFromCookie, persitTokenToCookie, removeTokenFromCookie} from '@/auth'
 
 export const state = () => ({
@@ -63,7 +63,7 @@ export const actions = {
      */
     login({commit, dispatch}, userInfo) {
         return new Promise((resolve, reject) => {
-            api.login(userInfo).then(data => {
+            userApi.login(userInfo).then(data => {
                 const {token} = data;
                 commit('SET_TOKEN', token)
                 commit('SET_LOGGED', true)
@@ -83,7 +83,7 @@ export const actions = {
      */
     obtainUserInfo({commit}) {
         return new Promise((resolve, reject) => {
-            api.fetchLoggedUserInfo().then((data) => {
+            userApi.fetchLoggedUserInfo().then((data) => {
                 const {userId, userName, nickName, roles, permissions, avatar} = data;
 
                 commit('SET_USER_ID', userId)
@@ -132,7 +132,7 @@ export const actions = {
      */
     logout({commit}) {
         return new Promise(resolve => {
-            api.logout().then(() => {
+            userApi.logout().then(() => {
                 removeTokenFromCookie();
                 location.reload();
 

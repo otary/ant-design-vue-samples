@@ -32,6 +32,10 @@
     }
 </script>
 
-<style>
-
+<style scoped lang="scss">
+    .main {
+        min-height: calc(100vh - 135px);
+        padding: 10px;
+        text-align: left;
+    }
 </style>

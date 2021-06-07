@@ -73,7 +73,7 @@ module.exports = {
      * API middleware 中间件
      */
     serverMiddleware: [
-        '~/api/index.js'
+       // '~/api/index.js'
     ],
     /**
      * 第三方插件
