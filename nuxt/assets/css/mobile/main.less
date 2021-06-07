@@ -1,0 +1,112 @@
+html {
+  font-size: 625%;
+}
+
+/******************Antd ant-drawer********************/
+.ant-drawer > * {
+  transition: -webkit-transform 0.15s cubic-bezier(0.9, 0, 0.3, 0.7);
+  transition: transform 0.15s cubic-bezier(0.9, 0, 0.3, 0.7);
+  transition: transform 0.15s cubic-bezier(0.9, 0, 0.3, 0.7), -webkit-transform 0.15s cubic-bezier(0.9, 0, 0.3, 0.7);
+}
+
+/****************抽屉动画****************/
+.drawer-containel-left {
+  position: fixed;
+  animation: move-left 150ms cubic-bezier(0.9, 0, 0.3, 0.7);
+  -webkit-animation: move-left 150ms cubic-bezier(0.9, 0, 0.3, 0.7);
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes move-left {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -85vw;
+  }
+}
+
+.drawer-containel-right {
+  position: fixed;
+  animation: move-right 150ms cubic-bezier(0.9, 0, 0.3, 0.7);
+  -webkit-animation: move-right 150ms cubic-bezier(0.9, 0, 0.3, 0.7);
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes move-right {
+  0% {
+    left: -85vw;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+/****************body****************/
+#components-layout-mobile-top {
+  width: 100vw;
+
+  .header-content {
+
+    .hamb-bt {
+      border: none;
+      margin-top: -0.02rem;
+    }
+
+    .hamb {
+      height: 0.02rem;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      background-color: rgb(255, 255, 255)
+    }
+
+    .hamb-top {
+      .hamb;
+      top: 0.05rem
+    }
+
+    .hamb-middle {
+      .hamb;
+      margin-top: -0.01rem;
+      top: 50%;
+    }
+
+    .hamb-bottom {
+      .hamb;
+      bottom: 0.05rem;
+    }
+  }
+
+  .ant-layout-header {
+    padding: 0.1rem 0.16rem;
+    height: 0.44rem;
+    line-height: 0.44rem;
+    margin-bottom: 0.06rem;
+    box-shadow: 0 0.04rem 0.04rem -0.01rem rgba(0, 0, 0, 0.5), 0 0.01rem 0.1rem 0 rgba(0, 0, 0, 0.42);
+  }
+
+  .logo {
+    width: 0.93rem;
+    height: 0.24rem;
+    background-image: url('../../../static/logo.png');
+    float: left;
+    background-repeat: round;
+  }
+
+  .content {
+    background: #fff;
+    padding: 0.16rem;
+    min-height: e("calc(100vh)")
+  }
+
+  footer {
+    padding: 0.20rem;
+    text-align: center;
+    border-top: 1px solid #ddd;
+  }
+}
+
+
