@@ -10,6 +10,7 @@
 
 <style scoped lang="scss">
   .logo-img {
-
+    width: 2.5rem;
+    height: 4rem;
   }
 </style>

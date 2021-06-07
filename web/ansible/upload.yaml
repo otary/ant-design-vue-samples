@@ -1,0 +1,19 @@
+---
+- hosts: tencent
+  vars:
+    tmp_dir: /tmp
+    data_dir: /data/modules/quotations/web
+    gz_name: quotation.tar.gz
+  tasks:
+    - name: package
+      connection: local
+      shell: cd .. && npm run build
+    - name: tar
+      connection: local
+      shell: tar -czf ../../{{gz_name}} ../dist --exclude=.idea --exclude=.git --exclude=ansible --exclude README.md --exclude LICENSE
+    - name: mkdir tmp dir
+      shell: mkdir -p {{tmp_dir}}/quotation
+    - name: deploy
+      copy: src=../../{{gz_name}} dest={{tmp_dir}}
+    - name: xtar
+      shell: tar -xzf  {{tmp_dir}}/{{gz_name}} -C {{data_dir}}  --strip-components 1

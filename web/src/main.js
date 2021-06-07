@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
-import router from './router'
-import store from './store'
+import router from '@/router'
+import store from '@/store'
+import animated from 'animate.css'
+import '@/auth/permission'
 import {
   Button,
   message,
@@ -23,7 +25,8 @@ import {
   Tag,
   Descriptions,
   Table,
-  Switch
+  Switch,
+  Modal
 } from 'ant-design-vue'
 
 Vue.config.productionTip = false
@@ -48,7 +51,9 @@ Vue.use(Tag);
 Vue.use(Descriptions);
 Vue.use(Table);
 Vue.use(Switch);
+Vue.use(Modal);
 
+Vue.prototype.$message = message;
 
 new Vue({
   router,

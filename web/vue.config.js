@@ -15,10 +15,13 @@ module.exports = {
     host: '127.0.0.1',
     public: '127.0.0.1:8080',
     proxy: {
-      '/api': {
-        target: 'http://localhost:8866',
+      '^/api': {
+        target: 'http://119.45.252.139:9596',
+       // target: 'http://localhost:9900',
         changeOrigin: true,
-        pathRewrite: {}
+        pathRewrite: {
+          // '^/api': '/'
+        }
       }
     }
   },
