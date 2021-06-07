@@ -10,7 +10,7 @@ module.exports = {
                 name: 'viewport',
                 content: 'maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0'
             },
-            {hid: 'description', name: 'description', content: 'Nuxt.js project'},
+            {hid: 'description', name: 'description', content: '不求人导航'},
             {'http-equiv': 'pragma', content: 'no-cache'},
             {'http-equiv': 'cache-control', content: 'no-cache, no-store, must-revalidate'},
             {'http-equiv': 'expires', content: '0'},
@@ -24,7 +24,7 @@ module.exports = {
     /*
      ** Global CSS 公共样式
      */
-    css: ['~/assets/css/common.less', 'ant-design-vue/dist/antd.less'],
+    css: ['~/assets/scss/common.scss', 'ant-design-vue/dist/antd.less'],
     vue: {
         config: {
             productionTip: true,

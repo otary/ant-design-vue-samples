@@ -1,6 +1,7 @@
 export default ({app, redirect, req}) => {
     // eslint-disable-next-line
-    let path , clientType = /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+    let path,
+        clientType = /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
     // 服务端渲染时判断客户端类型
     if (process.server) {
         // 根据request消息头，动态改变路由的跳转

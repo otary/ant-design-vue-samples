@@ -289,7 +289,7 @@
     }
 
     export default {
-        data () {
+        data() {
             return {
                 key: '1',
                 type: 0,
@@ -338,23 +338,23 @@
                 }]
             }
         },
-        beforeCreate () {
+        beforeCreate() {
             this.form = this.$form.createForm(this)
         },
         methods: {
-            updateNowLang () {
+            updateNowLang() {
                 this.$i18n.locale = this.$i18n.locale === 'en' ? 'cn' : 'en'
             },
-            changeMode (checked) {
+            changeMode(checked) {
                 this.mode = checked ? 'vertical' : 'inline'
             },
-            changeTheme (checked) {
+            changeTheme(checked) {
                 this.theme = checked ? 'dark' : 'light'
             },
-            tabsCallback (key) {
+            tabsCallback(key) {
                 console.log(key)
             },
-            handleSubmit (e) {
+            handleSubmit(e) {
                 e.preventDefault()
                 this.form.validateFieldsAndScroll((err, values) => {
                     if (!err) {
@@ -362,11 +362,11 @@
                     }
                 })
             },
-            handleConfirmBlur (e) {
+            handleConfirmBlur(e) {
                 const value = e.target.value
                 this.confirmDirty = this.confirmDirty || !!value
             },
-            compareToFirstPassword (rule, value, callback) {
+            compareToFirstPassword(rule, value, callback) {
                 const form = this.form
                 if (value && value !== form.getFieldValue('password')) {
                     // callback('Two passwords that you enter is inconsistent!')
@@ -374,33 +374,33 @@
                     callback()
                 }
             },
-            validateToNextPassword (rule, value, callback) {
+            validateToNextPassword(rule, value, callback) {
                 const form = this.form
                 if (value && this.confirmDirty) {
                     form.validateFields(['confirm'], {force: true})
                 }
                 callback()
             },
-            enterIconLoading () {
+            enterIconLoading() {
                 this.iconLoading = {delay: 200}
                 setTimeout(() => {
                     this.iconLoading = false
                 }, 3000)
             },
-            handleCancel () {
+            handleCancel() {
                 this.previewVisible = false
             },
-            handlePreview (file) {
+            handlePreview(file) {
                 this.previewImage = file.url || file.thumbUrl
                 this.previewVisible = true
             },
-            handleChange ({fileList}) {
+            handleChange({fileList}) {
                 this.fileList = fileList
             },
-            error () {
+            error() {
                 this.$message.error('This is a message of error')
             },
-            warning () {
+            warning() {
                 this.$message.warning('This is message of warning')
             }
         },
@@ -408,7 +408,7 @@
             FsHead,
             fonter
         },
-        head () {
+        head() {
             return {
                 title: 'Fangsea.io 2.0'
             }
