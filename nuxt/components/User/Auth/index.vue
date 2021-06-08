@@ -79,11 +79,11 @@
 
         <a-form-item>
           <a-checkbox v-decorator="['rememberMe', { valuePropName: 'checked' }]">自动登录</a-checkbox>
-          <router-link
+          <nuxt-link
             :to="{ name: '/'}"
             style="float: right;"
           >忘记密码
-          </router-link>
+          </nuxt-link>
         </a-form-item>
 
         <a-form-item>
@@ -110,7 +110,7 @@
           <a>
             <a-icon class="user-login__other-item-icon" type="weibo-circle"></a-icon>
           </a>
-          <router-link class="user-login__register-link" :to="{ name: 'Register' }" @click.native="state.loginFormVisible = false;">注册账户</router-link>
+          <nuxt-link class="user-login__register-link" to="/user/register" @click.native="state.loginFormVisible = false;">注册账户</nuxt-link>
         </div>
       </a-form>
     </a-modal>
