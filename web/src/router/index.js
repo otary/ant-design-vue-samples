@@ -15,6 +15,9 @@ export default new VueRouter({
       path: '/',
       name: 'Home',
       component: () => import('@/views/HomePage'),
+      meta: {
+        title: '首页'
+      },
       children: []
     }
   ]

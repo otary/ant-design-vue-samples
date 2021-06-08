@@ -22,8 +22,8 @@ router.beforeEach(async (to, from, next) => {
   NProgress.start()
 
   // 修改页面title
-  if (to.meta.subTitle) {
-    document.title = '语录集 - ' + to.meta.subTitle + ' | 不求人导航'
+  if (to.meta && to.meta.title) {
+    document.title =  to.meta.title + ' | 不求人导航'
   }
 
   if (to.matched.length == 0) {
