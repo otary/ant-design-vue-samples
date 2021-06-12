@@ -32,9 +32,16 @@ module.exports = {
      * "error" -> 2 开启错误规则
      */
     rules: {
+        "no-multiple-empty-lines": "warn",
+        "quotes": "off",
+        "space-before-function-paren": "off",
+        "space-before-blocks": "off",
+        "spaced-comment": "off",
+        "semi": "off",
+        "arrow-spacing": "off",
         // 缩进
         "indent": [
-            "error",
+            "off",
             4
         ],
         // 使用es6语法定义变量
