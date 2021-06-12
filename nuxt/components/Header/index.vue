@@ -1,13 +1,13 @@
 <template>
   <a-layout-header class="header">
     <a-row>
-      <a-col :xs="20" :sm="20" :md="8" :lg="7" :xl="5" :xxl="{ span: 4, offset: 4}">
+      <a-col :xs="20" :sm="20" :lg="8" :xxl="{ span: 6, offset: 2}">
         <a class="header-logo" href="#">
-          <!--<logo class="logo"/>-->
+          <logo class="logo"/>
           <h2 class="header-title">不求人导航</h2>
         </a>
       </a-col>
-      <a-col :xs="4" :sm="4" :md="16" :lg="17" :xl="19" :xxl="{ span:12, offset: -4 }">
+      <a-col :xs="4" :sm="4" :lg="16" :xxl="{ span:14, offset: -2 }">
         <a-menu class="menu" mode="horizontal" :selectedKeys="[$route.path]">
           <a-sub-menu>
               <span slot="title">
@@ -52,7 +52,7 @@
   export default {
     name: "Header",
     components: {
-      /*'Logo': () => import('@/components/Logo'),*/
+      'Logo': () => import('@/components/Logo'),
       'UserAuth': () => import('@/components/User/Auth')
     },
     data() {

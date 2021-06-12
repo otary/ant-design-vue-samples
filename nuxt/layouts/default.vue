@@ -3,7 +3,7 @@
         <Header></Header>
         <a-layout-content class="main">
             <a-row>
-                <a-col :xxl="{ span: 16, offset: 4}">
+                <a-col :xxl="{ span: 20, offset: 2}">
                     <nuxt/>
                 </a-col>
             </a-row>
