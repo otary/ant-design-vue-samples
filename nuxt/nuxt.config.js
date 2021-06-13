@@ -80,7 +80,8 @@ module.exports = {
      */
     plugins: [
         {src: '~/plugins/antd.js', ssr: true},
-        {src: '~/plugins/i18n.js', ssr: true}
+        {src: '~/plugins/i18n.js', ssr: true},
+        {src: '~/plugins/route.js', ssr: true}
     ],
     /**
      * 全局拦截配置

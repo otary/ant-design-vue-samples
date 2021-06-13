@@ -32,13 +32,20 @@ module.exports = {
      * "error" -> 2 开启错误规则
      */
     rules: {
-        "no-multiple-empty-lines": "warn",
+        "no-multiple-empty-lines": "off",
         "quotes": "off",
         "space-before-function-paren": "off",
         "space-before-blocks": "off",
         "spaced-comment": "off",
+        "no-var": "off",
         "semi": "off",
+        "padded-blocks": "off",
+        "comma-dangle": "off",
         "arrow-spacing": "off",
+        "no-trailing-spaces": "off",
+        "no-debugger": "off",
+        "no-unused-vars": "off",
+        "no-unreachable": "warn",
         // 缩进
         "indent": [
             "off",

@@ -18,5 +18,7 @@
       width: 100%;
       padding: 15px 50px;
       text-align: center;
+      background-color: white;
+      z-index: 99;
     }
 </style>
