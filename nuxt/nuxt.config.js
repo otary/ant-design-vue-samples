@@ -35,6 +35,7 @@ module.exports = {
      * 编译配置
      */
     build: {
+        analyze: true,  // 开启分析
         vendor: ['axios'],
         cache: true,
         parallel: true,
@@ -42,14 +43,14 @@ module.exports = {
             /*
              ** Run ESLINT on save
              */
-            if (ctx.isDev && ctx.isClient) {
+            /*if (ctx.isDev && ctx.isClient) {
                 config.module.rules.push({
                     enforce: 'pre',
                     test: /\.(js|vue)$/,
                     loader: 'eslint-loader',
                     exclude: /(node_modules|.nuxt)/
                 })
-            }
+            }*/
             /**
              * // 自定义 ant-design-vue 主题颜色
              */
@@ -89,7 +90,9 @@ module.exports = {
      * 全局拦截配置
      */
     router: {
-        middleware: ['i18n', 'route']
+        middleware: ['i18n', 'route'],
+        resourceHints: false,
+        prefetchLinks: false  // 解决首屏加载全部js
     },
     /**
      * 加载风格
