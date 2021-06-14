@@ -3,8 +3,8 @@
     <div v-if="!isLogged" @click="handleOpenLoginForm">
       <a-icon type="user" />登录/注册
     </div>
-    <div v-if="isLogged">
-      <a-avatar class="menu-icon__user" icon="user"/> &nbsp;张三
+    <div v-else>
+      <a-avatar class="menu-icon__user" icon="user"/> &nbsp;{{nickName}}
     </div>
 
     <a-modal v-model="state.loginFormVisible" title="" footer="">
@@ -178,7 +178,8 @@
     },
     computed: {
       ...mapState({
-        isLogged: state => state.user.logged
+        isLogged: state => state.user.logged,
+        nickName: state => state.user.nickName
       })
     }
   }

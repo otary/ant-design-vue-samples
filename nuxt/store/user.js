@@ -51,6 +51,24 @@ export const mutations = {
      */
     SET_NICK_NAME: (state, nickName) => {
         state.nickName = nickName
+    },
+    /**
+     * 获取token
+     * @param commit
+     * @param state
+     * @returns {*}
+     */
+     obtainToken(state) {
+        if (state.token) {
+            return state.token;
+        }
+        const token = getTokenFromCookie();
+
+        if (token) {
+            state.token = token;
+            state.logged = true;
+        }
+        return token;
     }
 }
 
@@ -81,7 +99,7 @@ export const actions = {
      * 获取用户信息
      * @param commit
      */
-    obtainUserInfo({commit}) {
+     obtainUserInfo({commit}) {
         return new Promise((resolve, reject) => {
             userApi.fetchLoggedUserInfo().then((data) => {
                 const {userId, userName, nickName, roles, permissions, avatar} = data;
@@ -93,7 +111,8 @@ export const actions = {
 
                 resolve();
             }).catch((error) => {
-                console.log(error)
+                console.error(error)
+
                 reject(error)
             });
         })
@@ -141,4 +160,3 @@ export const actions = {
         })
     }
 }
-

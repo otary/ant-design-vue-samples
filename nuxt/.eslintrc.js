@@ -46,6 +46,9 @@ module.exports = {
         "no-debugger": "off",
         "no-unused-vars": "off",
         "no-unreachable": "warn",
+        "eqeqeq": "warn",
+        "no-undef": "warn",
+        "no-multi-spaces": "warn",
         // 缩进
         "indent": [
             "off",

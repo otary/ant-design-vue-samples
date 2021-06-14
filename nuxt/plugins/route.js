@@ -1,4 +1,4 @@
-export default ({app, store}) => {
+export default function ({app, route, store}) {
 
     // 白名单,不进行认证
     const whiteList = ['/*']
@@ -9,8 +9,7 @@ export default ({app, store}) => {
         }).length > 0;
     }
 
-    app.router.beforeEach((to, from, next) => {
-
+    app.router.beforeEach(async (to, from, next) => {
         if (to.matched.length === 0) {
             console.log('未匹配到页面!')
         }
@@ -23,7 +22,7 @@ export default ({app, store}) => {
         }
 
         if (!token) {
-            token = store.commit('user/obtainToken');
+            token = await store.dispatch('user/obtainToken');
         }
 
         if (!token) {
@@ -31,7 +30,6 @@ export default ({app, store}) => {
             if (isWhitePath(to.path)) {
                 return next();
             } else {
-
                 // 未登录，跳转到登录页
                 return next(`/login?redirect=${to.path}`)
             }
@@ -49,8 +47,6 @@ export default ({app, store}) => {
                 return next();
             }
         }
-
-        next()
-
+        // next()
     })
 }
