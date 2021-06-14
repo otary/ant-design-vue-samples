@@ -36,6 +36,7 @@
     .main {
         min-height: calc(100vh - 135px);
         padding: 10px;
+        margin-bottom: 50px;
         text-align: left;
     }
 </style>

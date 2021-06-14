@@ -49,6 +49,8 @@ module.exports = {
         "eqeqeq": "warn",
         "no-undef": "warn",
         "no-multi-spaces": "warn",
+        "one-var": "warn",
+        "no-eval": "warn",
         // 缩进
         "indent": [
             "off",

@@ -82,7 +82,8 @@ module.exports = {
         {src: '~/plugins/antd.js', ssr: true},
         {src: '~/plugins/i18n.js', ssr: true},
         {src: '~/plugins/route.js', ssr: true},
-        {src: '~/plugins/request.js', ssr: true}
+        {src: '~/plugins/request.js', ssr: true},
+        {src: '~/plugins/statistical.js', ssr: false}
     ],
     /**
      * 全局拦截配置

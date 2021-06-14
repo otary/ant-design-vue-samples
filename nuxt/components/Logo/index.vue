@@ -11,6 +11,7 @@
 <style scoped lang="scss">
   .logo-img {
     width: 32px;
+    height: 35px;
     margin-right: 10px;
   }
 </style>
