@@ -6,8 +6,8 @@ moment.locale('zh-cn');
 
 import {
     Alert,
-    message,
     Button,
+    message,
     Card,
     Col,
     Descriptions,
@@ -28,7 +28,10 @@ import {
     Tag,
     Statistic,
     Radio,
-    Modal
+    Modal,
+    Checkbox,
+    Badge,
+    Tooltip
 } from 'ant-design-vue'
 
 Vue.config.productionTip = false
@@ -55,6 +58,9 @@ Vue.use(Button)
     .use(Switch)
     .use(Statistic)
     .use(Radio)
-    .use(Modal);
+    .use(Modal)
+    .use(Checkbox)
+    .use(Badge)
+    .use(Tooltip);
 
 Vue.prototype.$message = message;

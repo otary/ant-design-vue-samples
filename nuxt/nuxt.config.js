@@ -1,3 +1,5 @@
+const webpack = require("webpack");
+const path = require('path');
 module.exports = {
     /*
       ** Headers of the page
@@ -68,7 +70,12 @@ module.exports = {
             //         }
             //     }]
             // })
-        }
+            config.resolve.alias['@ant-design/icons/lib/dist$'] = path.resolve(__dirname, './plugins/icons.js')
+        },
+        plugins: [
+            // 移除moment，按需引入
+            new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+        ]
     },
     /**
      * API middleware 中间件

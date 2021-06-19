@@ -13,8 +13,8 @@
               <span slot="title">
                <a-icon type="form"/>CSS生成器
              </span>
-            <a-menu-item key="/box-style-editor">
-              <nuxt-link :to="{ name: 'box-style-editor' }">
+            <a-menu-item key="/event/mouseevent">
+              <nuxt-link to="/event/mouseevent">
                 <a-icon type="tablet" class="menu-icon"/>
                 CSS边框生成器
               </nuxt-link>
@@ -111,7 +111,6 @@
       margin: 0;
       font-size: 30px;
       font-weight: 600;
-      letter-spacing: 1px;
       color: $menu-title-color;
       font-family: cursive;
       text-shadow: 3px 4px 0 rgba(0, 0, 0, .1);

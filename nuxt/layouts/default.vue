@@ -38,5 +38,6 @@
         padding: 10px;
         margin-bottom: 50px;
         text-align: left;
+        background: url("@/assets/img/bg.svg");
     }
 </style>
