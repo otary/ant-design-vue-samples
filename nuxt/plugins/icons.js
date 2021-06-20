@@ -14,6 +14,8 @@ export {
     TaobaoCircleOutline,
     WeiboCircleOutline,
     MailOutline,
-    CloseOutline
+    CloseOutline,
+    LeftOutline,
+    RightOutline
 } from '@ant-design/icons';
 
