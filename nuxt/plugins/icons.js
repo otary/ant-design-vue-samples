@@ -16,6 +16,7 @@ export {
     MailOutline,
     CloseOutline,
     LeftOutline,
-    RightOutline
+    RightOutline,
+    CloseCircleFill
 } from '@ant-design/icons';
 
