@@ -17,6 +17,8 @@ export {
     CloseOutline,
     LeftOutline,
     RightOutline,
-    CloseCircleFill
+    CloseCircleFill,
+    DownOutline,
+    UpOutline,
 } from '@ant-design/icons';
 
