@@ -61,12 +61,7 @@
     methods: {
       ...mapActions({
         logout: 'user/logout'
-      }),
-      onSearch() {
-        this.$router.push({
-          path: 'search'
-        })
-      }
+      })
     },
     computed: {
       ...mapGetters([

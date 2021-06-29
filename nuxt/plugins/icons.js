@@ -20,5 +20,6 @@ export {
     CloseCircleFill,
     DownOutline,
     UpOutline,
+    CheckCircleOutline
 } from '@ant-design/icons';
 
