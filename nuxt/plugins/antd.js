@@ -31,7 +31,8 @@ import {
     Modal,
     Checkbox,
     Badge,
-    Tooltip
+    Tooltip,
+    Avatar
 } from 'ant-design-vue'
 
 Vue.config.productionTip = false
@@ -61,6 +62,7 @@ Vue.use(Button)
     .use(Modal)
     .use(Checkbox)
     .use(Badge)
-    .use(Tooltip);
+    .use(Tooltip)
+    .use(Avatar);
 
 Vue.prototype.$message = message;
