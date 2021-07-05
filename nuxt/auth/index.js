@@ -7,7 +7,9 @@ const TOKEN_KEY = "OTARY_TOKEN";
  * @returns {*}
  */
 export function getTokenFromCookie() {
-  return Cookies.get(TOKEN_KEY)
+  return Cookies.get(TOKEN_KEY, {
+    domain: 'bqrdh.com'
+  })
 }
 
 /**
@@ -27,5 +29,6 @@ export function removeTokenFromCookie() {
   Cookies.remove(TOKEN_KEY, {
     domain: 'bqrdh.com'
   });
+  Cookies.remove(TOKEN_KEY);
 }
 
