@@ -262,7 +262,6 @@
                                 account: values.email,
                                 accountType: "EMAIL"
                             }).then(() => {
-                              //  state.smsSending = true;
                                 setTimeout(hide, 2500);
                                 $message.success("验证码发送成功!");
                             }).catch((err) => {

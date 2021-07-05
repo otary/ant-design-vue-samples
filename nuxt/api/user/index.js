@@ -21,6 +21,20 @@ export default {
    */
   fetchLoggedUserInfo() {
     return request.get('/api/users/info');
+  },
+
+  /**
+   * 发送验证码
+   */
+  sendCaptcha(data) {
+    return request.post('/api/users/captcha/send', data)
+  },
+
+  /**
+   * 用户注册
+   */
+  register(data) {
+    return request.post('/api/users/register', data)
   }
 
 }
