@@ -21,6 +21,7 @@ export {
     DownOutline,
     UpOutline,
     LogoutOutline,
-    CheckCircleFill
+    CheckCircleFill,
+    SmileOutline
 } from '@ant-design/icons';
 

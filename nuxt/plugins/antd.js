@@ -33,7 +33,8 @@ import {
     Tooltip,
     Avatar,
     Select,
-    Popover
+    Popover,
+    Progress
 } from 'ant-design-vue'
 
 Vue.config.productionTip = false
@@ -67,6 +68,7 @@ Vue.use(Button)
     .use(Tooltip)
     .use(Avatar)
     .use(Select)
-    .use(Popover);
+    .use(Popover)
+    .use(Progress);
 
 Vue.prototype.$message = message;

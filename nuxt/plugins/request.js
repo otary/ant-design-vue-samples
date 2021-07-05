@@ -26,7 +26,7 @@ export default function ({store}) {
 
         return {
             // 增加时间戳参数
-            ...config, params: {...(config.params || {}), _t: +new Date()}
+            ...config, params: {...(config.params || {}), _t: (config.removeTimestamp ? "" : +new Date())}
         };
     }, (error) => {
         Promise.reject(error);
@@ -38,14 +38,17 @@ export default function ({store}) {
             return Promise.resolve(response.data);
         },
         (error) => {
-            console.error(error.response.data);
+            if (!error.response) {
+                return Promise.reject(error.response);
+            }
 
             if (error.response.data) {
                 const data = error.response.data;
                 /**
                  *  40302 - 用户不存在
+                 *  40312 - 验证码不正确
                  */
-                if (data.code === 40302) {
+                if (data.code === 40302  || data.code === 40312) {
                     message.error(data.msg)
                     return Promise.reject(error.response.data);
                 }

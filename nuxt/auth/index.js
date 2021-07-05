@@ -15,13 +15,17 @@ export function getTokenFromCookie() {
  * @param token
  */
 export function persitTokenToCookie(token) {
-  Cookies.set(TOKEN_KEY, token)
+  Cookies.set(TOKEN_KEY, token, {
+    domain: 'bqrdh.com'
+  })
 }
 
 /**
  * 删除Cookie中的Token
  */
 export function removeTokenFromCookie() {
-  Cookies.remove(TOKEN_KEY);
+  Cookies.remove(TOKEN_KEY, {
+    domain: 'bqrdh.com'
+  });
 }
 
