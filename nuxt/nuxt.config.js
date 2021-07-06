@@ -70,6 +70,12 @@ module.exports = {
             //         }
             //     }]
             // })
+            config.module.rules.push({
+                test: /\.ico$/,
+                use: [{
+                    loader: 'url-loader',
+                }]
+            });
             config.resolve.alias['@ant-design/icons/lib/dist$'] = path.resolve(__dirname, './plugins/icons.js')
         },
         plugins: [
