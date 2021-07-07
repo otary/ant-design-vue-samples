@@ -2,7 +2,7 @@
   <a-layout-header class="header">
     <a-row>
       <a-col :xs="20" :sm="20" :lg="8" :xxl="{ span: 6, offset: 2}">
-        <a class="header-logo" href="#">
+        <a class="header-logo" href="/">
           <logo class="logo"/>
           <h2 class="header-title">不求人导航</h2>
         </a>
