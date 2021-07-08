@@ -1,6 +1,6 @@
 <template>
     <a-layout>
-        <Header></Header>
+        <Header/>
         <a-layout-content class="main">
             <a-row>
                 <a-col :xxl="{ span: 20, offset: 2}">
@@ -8,7 +8,7 @@
                 </a-col>
             </a-row>
         </a-layout-content>
-        <Footer></Footer>
+        <Footer/>
     </a-layout>
 </template>
 
