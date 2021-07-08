@@ -15,7 +15,7 @@
     export default {
         props: ['error'],
         layout: function () {
-            return 'empty'
+            return 'fullscreen'
         },
         methods: {
             handleBack() {
