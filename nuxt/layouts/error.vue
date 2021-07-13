@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="error-container">
         <div class="text-container">
             <h1 class="title">{{ error.statusCode }}!</h1>
             <div>
@@ -30,14 +30,14 @@
     }
 </script>
 
-<style>
-    body {
+<style scoped lang="scss">
+    .error-container {
+        width: 100%;
+        height: 100vh;
         background: url("@/assets/img/404.jpg");
         background-size: cover;
     }
-</style>
 
-<style scoped lang="scss">
     .text-container {
         position: absolute;
         top: 20%;
